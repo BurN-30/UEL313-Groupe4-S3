@@ -9,7 +9,7 @@
             <title>{{ link.title }}</title>
             <description>{{ link.desc }}</description>
             <link>{{ link.url }}</link>
-            <guid>{{ link.url }}</guid>
+            <guid>{{ url('link', { 'id': link.id }) }}</guid>
         </item>
         {% endfor %}
     </channel>
