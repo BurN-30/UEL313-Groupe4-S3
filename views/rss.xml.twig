@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Watson</title>
+        <description>Les 15 derniers liens publiés sur Watson</description>
+        <link>{{ url('home') }}</link>
+        {% for link in links %}
+        <item>
+            <title>{{ link.title }}</title>
+            <description>{{ link.desc }}</description>
+            <link>{{ link.url }}</link>
+            <guid>{{ link.url }}</guid>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

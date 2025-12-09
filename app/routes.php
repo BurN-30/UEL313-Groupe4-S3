@@ -3,6 +3,9 @@
 // Home page
 $app->get('/', "Watson\Controller\HomeController::indexAction")->bind('home');
 
+// RSS Feed
+$app->get('/rss', "Watson\Controller\HomeController::rssAction")->bind('rss');
+
 // Detailed info about a link
 $app->match('/link/{id}', "Watson\Controller\HomeController::linkAction")->bind('link');
 

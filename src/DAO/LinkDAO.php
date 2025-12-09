@@ -47,6 +47,30 @@ class LinkDAO extends DAO
     }
 
     /**
+     * Return a list of links, sorted by date (most recent first), limited to a number.
+     *
+     * @param integer $limit The number of links to retrieve.
+     *
+     * @return array A list of links.
+     */
+    public function findAllLimited($limit) {
+        $sql = "
+            SELECT * 
+            FROM tl_liens 
+            ORDER BY lien_id DESC
+            LIMIT " . (int) $limit;
+        $result = $this->getDb()->fetchAll($sql);
+
+        // Convert query result to an array of domain objects
+        $_links = array();
+        foreach ($result as $row) {
+            $linkId          = $row['lien_id'];
+            $_links[$linkId] = $this->buildDomainObject($row);
+        }
+        return $_links;
+    }
+    
+    /**
      * Returns a link matching the supplied id.
      *
      * @param integer $id The link id.

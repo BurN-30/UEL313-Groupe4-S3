@@ -50,7 +50,22 @@ CREATE TABLE `tl_liens` (
 INSERT INTO `tl_liens` (`lien_id`, `lien_url`, `lien_titre`, `lien_desc`, `user_id`) VALUES
 (1, 'https://cvtic.unilim.fr/', 'Campus Virtuel TIC', 'Site internet du CvTIC.', 1),
 (2, 'https://duckduckgo.com/', 'Duck Duck Go', 'Le moteur de recherche qui ne trace pas ses utilisateurs.', 1),
-(3, 'https://framasoft.org/', 'Framasoft', 'Un réseau dédié à la promotion du « libre » en général et du logiciel libre en particulier.', 1);
+(3, 'https://framasoft.org/', 'Framasoft', 'Un réseau dédié à la promotion du « libre » en général et du logiciel libre en particulier.', 1),
+(4, 'https://x.com/home', 'Twitter', 'A website which public refused the new name.', 1),
+(5, 'https://www.instagram.com/', 'Instagram', 'Poster des images, c\'est bien, quand les gens l\'a vois, c\'est moins bien. Ou mieux ?', 1),
+(6, 'https://www.microsoft.com/fr-fr', 'Microsoft', 'C\'est ici qu\'on paye la suite office à partir d\'un prix exorbitant !', 1),
+(7, 'https://www.php.net/', 'Php', 'La documentation de Php, utile.', 1),
+(8, 'https://react.dev/learn', 'React', 'La documentation de React, utile.', 1),
+(9, 'https://angular.dev/overview', 'Angular', 'La documentation d\'Angular, utile.', 1),
+(10, 'https://learn.microsoft.com/fr-fr/cpp/cpp/?view=msvc-170', 'C++', 'la documentation de C++, utile.', 1),
+(11, 'https://discord.com/', 'Discord', 'Fabuleux logiciel de communication utilisable par tous.', 1),
+(12, 'https://github.com/', 'Github', 'C\'est un beau logiciel', 1),
+(13, 'https://www.twitch.tv//', 'Twitch', 'Twitch est un service de diffusion vidéo direct par flux ou streaming et une plateforme de vidéo à la demande lancés en juin 2011 et exploités par la société américaine Twitch Interactive, filiale du groupe Amazon.', 1),
+(14, 'https://www.netflix.com/fr/', 'Netflix', 'Site de streaming de séries payant.', 1),
+(15, 'https://www.amazon.fr/', 'Amazon', 'Boutique en ligne.', 1),
+(16, 'https://www.cdiscount.com/', 'CDisount', 'Boutique en ligne.', 1),
+(17, 'https://www.wish.com/', 'Wish', 'Boutique en ligne.', 1),
+(18, 'https://fr.wikipedia.org/wiki/Sherlock_Holmes', 'Sherlock Holmes', 'Sherlock Holmes est un personnage de fiction britannique créé par Sir Arthur Conan Doyle dans le roman policier Une étude en rouge en 1887.', 1);
 
 -- --------------------------------------------------------
 
@@ -145,7 +160,7 @@ ALTER TABLE `tl_users`
 -- AUTO_INCREMENT pour la table `tl_liens`
 --
 ALTER TABLE `tl_liens`
-  MODIFY `lien_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `lien_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `tl_tags`
